@@ -48,7 +48,8 @@ extension SplashViewController {
         view.addSubview(logoImageview)
         logoImageview.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.width.height.equalTo(200)
+            make.width.equalTo(120)
+            make.height.equalTo(200)
             
         }
     }

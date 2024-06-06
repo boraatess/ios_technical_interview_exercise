@@ -13,6 +13,10 @@
 		3351E83C2C113CA900441522 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351E83B2C113CA900441522 /* SplashViewModel.swift */; };
 		3351E83E2C113DE400441522 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351E83D2C113DE400441522 /* DiscoverViewModel.swift */; };
 		3351E8402C11448800441522 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351E83F2C11448800441522 /* BaseViewModel.swift */; };
+		3351E8432C114D9700441522 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351E8422C114D9700441522 /* TopView.swift */; };
+		3351E8452C114FB200441522 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351E8442C114FB200441522 /* Reachability.swift */; };
+		3351E8472C114FD800441522 /* CustomScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351E8462C114FD800441522 /* CustomScroll.swift */; };
+		3351E8492C11500400441522 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351E8482C11500400441522 /* ViewExtensions.swift */; };
 		6E3A36022BF2563400ECE78C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3A36012BF2563400ECE78C /* AppDelegate.swift */; };
 		6E3A36062BF2563400ECE78C /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3A36052BF2563400ECE78C /* DiscoverViewController.swift */; };
 		6E3A360B2BF2563500ECE78C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E3A360A2BF2563500ECE78C /* Assets.xcassets */; };
@@ -30,6 +34,10 @@
 		3351E83B2C113CA900441522 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		3351E83D2C113DE400441522 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
 		3351E83F2C11448800441522 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		3351E8422C114D9700441522 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		3351E8442C114FB200441522 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		3351E8462C114FD800441522 /* CustomScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScroll.swift; sourceTree = "<group>"; };
+		3351E8482C11500400441522 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		6E3A35FE2BF2563400ECE78C /* Pollexa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pollexa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3A36012BF2563400ECE78C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E3A36052BF2563400ECE78C /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +105,16 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		3351E8412C114D4A00441522 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				3351E8422C114D9700441522 /* TopView.swift */,
+				3351E8462C114FD800441522 /* CustomScroll.swift */,
+				3351E8482C11500400441522 /* ViewExtensions.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		6E3A35F52BF2563400ECE78C = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				6E3A36152BF25D8D00ECE78C /* PostProvider.swift */,
+				3351E8442C114FB200441522 /* Reachability.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -164,6 +183,7 @@
 		6E3A36242BF2601100ECE78C /* UI Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3351E8412C114D4A00441522 /* CustomViews */,
 				3351E8362C11392D00441522 /* Base */,
 				3351E82F2C11387700441522 /* Splash */,
 				6E3A36252BF2602100ECE78C /* Discover */,
@@ -281,10 +301,14 @@
 				3351E83C2C113CA900441522 /* SplashViewModel.swift in Sources */,
 				3351E8382C11393700441522 /* BaseVC.swift in Sources */,
 				6E3A36162BF25D8D00ECE78C /* PostProvider.swift in Sources */,
+				3351E8472C114FD800441522 /* CustomScroll.swift in Sources */,
 				6E3A361C2BF25F2900ECE78C /* PostOption.swift in Sources */,
 				3351E83E2C113DE400441522 /* DiscoverViewModel.swift in Sources */,
 				3351E8322C11389800441522 /* SplashViewController.swift in Sources */,
+				3351E8432C114D9700441522 /* TopView.swift in Sources */,
 				6E3A36182BF25DA800ECE78C /* Post.swift in Sources */,
+				3351E8492C11500400441522 /* ViewExtensions.swift in Sources */,
+				3351E8452C114FB200441522 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

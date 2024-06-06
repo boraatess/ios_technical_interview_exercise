@@ -27,15 +27,12 @@ class DiscoverViewModel: DiscoverViewModelInputDelegate {
         postManager.fetchAll { result in
             switch result {
             case .success(let posts):
-                // self.pollCardView.configure(with: posts)
                 outputDelegate?.sendPostDatas(with: posts)
             case .failure(let error):
                 debugPrint(error.localizedDescription)
                 
             }
-            
         }
-        
         
     }
     
