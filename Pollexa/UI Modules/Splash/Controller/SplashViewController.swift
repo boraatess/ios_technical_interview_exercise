@@ -23,6 +23,7 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         
         print("splash")
+        viewModel.outputdelegate = self
         configureVM()
         layout()
     }
@@ -64,10 +65,11 @@ extension SplashViewController: SplashViewModelOutputDelegate {
     func goMainScene() {
         
         print("go main")
-        self.showDiscoverScene()
         
         DispatchQueue.main.asyncAfter(deadline: .now()+4) {
-            self.showDiscoverScene()
+            let vc = DiscoverViewController()
+            vc.modalPresentationStyle = .overCurrentContext
+            self.present(vc, animated: true)
         }
         
     }

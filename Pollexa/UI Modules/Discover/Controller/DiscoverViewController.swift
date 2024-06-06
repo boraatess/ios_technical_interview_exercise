@@ -29,13 +29,13 @@ class DiscoverViewController: UIViewController {
 extension DiscoverViewController {
     
     func configureVM() {
-        viewModel.getPostDatas()
         viewModel.output = self
-        
+        viewModel.getPostDatas()
+
     }
     
     func layout() {
-        view.backgroundColor = .white
+        view.backgroundColor = .blue
         
     }
     
@@ -46,6 +46,7 @@ extension DiscoverViewController: DiscoverViewModelOutputDelegate {
     func sendPostDatas(with posts: [Post]) {
         
         print(posts)
+        
     }
     
 }

@@ -11,7 +11,7 @@ protocol DiscoverViewModelOutputDelegate: AnyObject {
     func sendPostDatas(with posts: [Post])
 }
 
-protocol DiscoverViewModelInputDelegate: AnyObject {
+protocol DiscoverViewModelInputDelegate {
     func getPostDatas()
 }
 

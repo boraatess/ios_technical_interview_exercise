@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol SplashViewModelInputDelegate: AnyObject {
+protocol SplashViewModelInputDelegate {
     func checkReachability()
 }
 
