@@ -29,7 +29,7 @@ class SplashViewController: UIViewController {
     }
     
     func showDiscoverScene() {
-        let vc = DiscoverViewController()
+        let vc = DiscoverViewController(with: .init())
         vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: true)
     }
@@ -67,7 +67,7 @@ extension SplashViewController: SplashViewModelOutputDelegate {
         print("go main")
         
         DispatchQueue.main.asyncAfter(deadline: .now()+4) {
-            let vc = DiscoverViewController()
+            let vc = DiscoverViewController(with: .init())
             vc.modalPresentationStyle = .overCurrentContext
             self.present(vc, animated: true)
         }

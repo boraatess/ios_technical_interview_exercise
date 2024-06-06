@@ -7,17 +7,18 @@
 
 import Foundation
 
-protocol DiscoverViewModelOutputDelegate: AnyObject {
+protocol DiscoverViewModelOutputDelegate: ViewModelOutputProtocol {
     func sendPostDatas(with posts: [Post])
 }
 
-protocol DiscoverViewModelInputDelegate {
+protocol DiscoverViewModelInputDelegate: ViewModelProtocol {
     func getPostDatas()
 }
 
 class DiscoverViewModel: DiscoverViewModelInputDelegate {
     
-    weak var output: DiscoverViewModelOutputDelegate?
+    typealias T = DiscoverViewModelOutputDelegate
+    weak var outputDelegate: T?
     
     let postManager = PostProvider.shared
     
@@ -27,7 +28,7 @@ class DiscoverViewModel: DiscoverViewModelInputDelegate {
             switch result {
             case .success(let posts):
                 // self.pollCardView.configure(with: posts)
-                output?.sendPostDatas(with: posts)
+                outputDelegate?.sendPostDatas(with: posts)
             case .failure(let error):
                 debugPrint(error.localizedDescription)
                 

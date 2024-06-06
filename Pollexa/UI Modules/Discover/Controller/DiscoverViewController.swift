@@ -7,9 +7,7 @@
 
 import UIKit
 
-class DiscoverViewController: UIViewController {
-
-    var viewModel = DiscoverViewModel()
+class DiscoverViewController: BaseViewController<DiscoverViewModel> {
     
     
     // MARK: - Life Cycle
@@ -29,13 +27,11 @@ class DiscoverViewController: UIViewController {
 extension DiscoverViewController {
     
     func configureVM() {
-        viewModel.output = self
         viewModel.getPostDatas()
-
+        
     }
     
     func layout() {
-        view.backgroundColor = .blue
         
     }
     
