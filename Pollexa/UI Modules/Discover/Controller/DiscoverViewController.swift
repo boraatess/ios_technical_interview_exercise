@@ -9,6 +9,9 @@ import UIKit
 
 class DiscoverViewController: BaseViewController<DiscoverViewModel> {
     
+    var postsArray: [Post] = []
+    
+    
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -42,6 +45,7 @@ extension DiscoverViewController: DiscoverViewModelOutputDelegate {
     func sendPostDatas(with posts: [Post]) {
         
         print(posts)
+        self.postsArray = posts
         
     }
     
