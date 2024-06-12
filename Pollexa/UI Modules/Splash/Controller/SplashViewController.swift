@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SnapKit
 
-class SplashViewController: UIViewController {
+class SplashViewController: BaseViewController<SplashViewModel> {
     
     private let logoImageview: UIImageView = {
         let iv = UIImageView(frame: .zero)
@@ -15,15 +16,10 @@ class SplashViewController: UIViewController {
         iv.image = UIImage(named: "splashLogo")
         return iv
     }()
-    
-    var viewModel = SplashViewModel()
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("splash")
-        viewModel.outputdelegate = self
         configureVM()
         layout()
     }
@@ -40,7 +36,6 @@ extension SplashViewController {
     
     func configureVM() {
         viewModel.checkReachability()
-        viewModel.outputdelegate = self
     }
     
     func layout() {
@@ -60,13 +55,10 @@ extension SplashViewController: SplashViewModelOutputDelegate {
     
     func showError(with error: String) {
         
-        
     }
     
     func goMainScene() {
-        
-        print("go main")
-        
+                
         DispatchQueue.main.asyncAfter(deadline: .now()+4) {
             let vc = DiscoverViewController(with: .init())
             vc.modalPresentationStyle = .overCurrentContext

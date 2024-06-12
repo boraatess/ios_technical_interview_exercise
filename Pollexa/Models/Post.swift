@@ -14,4 +14,17 @@ struct Post: Decodable {
     let createdAt: Date
     let content: String
     let options: [Option]
+    let user: User
 }
+
+/*
+struct DisplayedPost: Codable {
+    
+    // MARK: - Properties
+    let id: String
+    let createdAt: Date
+    let content: String
+    let options: [Option]
+    var isVoted: Bool?
+}
+*/

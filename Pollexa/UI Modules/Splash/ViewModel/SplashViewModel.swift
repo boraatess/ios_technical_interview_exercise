@@ -8,11 +8,11 @@
 import Foundation
 
 
-protocol SplashViewModelInputDelegate {
+protocol SplashViewModelInputDelegate: ViewModelProtocol {
     func checkReachability()
 }
 
-protocol SplashViewModelOutputDelegate: AnyObject {
+protocol SplashViewModelOutputDelegate: ViewModelOutputProtocol {
     func showError(with error: String)
     func goMainScene()
 }
@@ -20,20 +20,14 @@ protocol SplashViewModelOutputDelegate: AnyObject {
 
 class SplashViewModel: SplashViewModelInputDelegate {
     
-    weak var outputdelegate: SplashViewModelOutputDelegate?
-    
-    // check network connection...
-    
-    func checkReachability() {
+    typealias T = SplashViewModelOutputDelegate
+    weak var outputDelegate: T?
         
-        print("checked")
-        outputdelegate?.goMainScene()
+    // check network connection...
+    func checkReachability() {
+        outputDelegate?.goMainScene()
         
     }
-    
-    
-    
-    
     
     
 }
