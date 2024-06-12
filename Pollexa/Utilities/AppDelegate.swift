@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = .init(frame: UIScreen.main.bounds)
         // let navigationController = UINavigationController()
         // navigationController.pushViewController(SplashViewController(), animated: false)
-        let rootVC = SplashViewController()
+        let rootVC = SplashViewController(with: .init())
         window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
         
