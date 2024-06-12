@@ -37,7 +37,7 @@ class HeaderView: UIView {
     private let iconIV: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
-        
+        iv.image = UIImage(named: "Icon")
         return iv
     }()
     
@@ -75,7 +75,13 @@ class HeaderView: UIView {
             make.height.equalTo(25)
         }
         
-        
+        rectView.addSubview(iconIV)
+        iconIV.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().inset(20)
+            make.width.equalTo(30)
+            make.height.equalTo(30)
+        }
         
     }
     

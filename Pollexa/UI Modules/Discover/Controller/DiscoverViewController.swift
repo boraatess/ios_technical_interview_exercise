@@ -80,7 +80,7 @@ extension DiscoverViewController {
         topView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         scrollView.stackView.addArrangedSubview(topView)
         
-        headerView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        headerView.heightAnchor.constraint(equalToConstant: 110).isActive = true
         scrollView.stackView.addArrangedSubview(headerView)
         
         scrollView.stackView.addArrangedSubview(tableView)
